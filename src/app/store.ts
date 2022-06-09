@@ -1,9 +1,15 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import deckReducer from './Reducers/deckSlice';
+import handReducer from './Reducers/handSlice'
+import scoreReducer from './Reducers/scoreSlice'
+import previousHandsReducer from './Reducers/previousHandsSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    deck: deckReducer,
+    hand: handReducer,
+    score: scoreReducer,
+    previousHands: previousHandsReducer
   },
 });
 
